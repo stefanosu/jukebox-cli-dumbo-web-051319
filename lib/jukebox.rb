@@ -20,6 +20,7 @@ I accept the following commands:
 HELP
   puts  
 end
+
   def start_game(songs)
   puts "Please enter a command:"
   reply = gets.chomp.downcase.strip
@@ -36,7 +37,7 @@ end
  def list(songs)
   puts "Sure thing! These are the songs I can play:"
   puts songs
-  # start_game(songs)
+  start_game(songs)
 end
 
  def play(songs)
