@@ -11,7 +11,7 @@ songs = [
 ]
 
 def help
-   
+   binding.pry 
   help = <<-HELP
 I accept the following commands:
 - help  displays this help message
