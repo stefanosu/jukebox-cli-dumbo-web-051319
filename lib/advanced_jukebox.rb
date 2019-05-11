@@ -13,9 +13,8 @@
 # }
 
 
-  #this method should be the same as in jukebox.rb
 def help
-  #this method should be the same as in jukebox.rb	  puts "I accept the following commands:",
+  #this method should be the same as in jukebox.rb
 
      "- help : displays this help message",
     "- list : displays a list of songs you can play",
