@@ -108,8 +108,8 @@ puts
 end
 
  def run(songs)
-  # puts "Hi! What's your name?"
-  # users_name = gets.chomp
+   puts "Hi! What's your name?"
+   users_name = gets.chomp
   say_hello("Leah", songs)
 end
   
