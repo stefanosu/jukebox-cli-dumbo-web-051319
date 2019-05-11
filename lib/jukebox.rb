@@ -11,66 +11,60 @@ songs = [
 ]
 
 def help
-  help = << HELP
-I accept the following commands:
-- help : displays this help message
-- list : displays a list of songs you can play
-- play : lets you choose a song to play
-- exit : exits this program
-HELP
-
-  puts help
+  puts "I accept the following commands:\n
+- help : displays this help message\n
+- list : displays a list of songs you can play\n
+- play : lets you choose a song to play\n
+- exit : exits this program"
 end
 
-help 
 
-def list(songs) 
-  songs.each_with_index { |item, index|
-    puts "#{index+1}. #{item}" }
-end 
+ def list(songs)
+  songs.each_with_index do |song,index|
+    puts "#{index + 1}. #{song}"
+  end
+end
 
-list(songs)
+ def play(songs)
+  list(songs)
+  puts
+  puts "What song do you want to play. Enter song name or number"
+  song_pick = gets.chomp.downcase
+  # songs.each_with_index do |song,index|
+    if songs.include?(song_pick) 
+      puts "Now playing song #{song_pick}"
+    elsif songs[song_pick.to_i - 1] 
+      puts "Now playing #{songs[song_pick.to_i - 1]}"
+    else
+      puts "Invalid input. Please try again!"
+    end
+end
 
-def play(songs)
-  puts "Please enter a song name or number:"
-  user_response = gets.downcase.chomp 
-  
-  if (1..9).to_a.include?(user_response.to_i)
-    puts "Playing #{songs[user_response.to_i - 1]}"
-    elsif songs.include?(user_response)
-    puts "Playing #{user_response}"
-  else 
-    puts "Invalid input, please try again"
-  end 
-end 
 
-play(songs)
-
-def exit_jukebox
+ def exit_jukebox
   puts "Goodbye"
-end 
+end
 
-def run(songs)
-  #help
-  command = "" 
-  while command  
-  puts "Please enter a command:"
-  command = gets.downcase.strip  
-  case command 
+ def run(songs)
+  help
+  puts  
+  puts "Please make a selection"
+  choice = gets.chomp
+  until choice == 'exit'
+    case choice
+
+     when 'help'
+      help
     when 'list'
       list(songs)
-      when 'play'
-        list(songs)
-        play(songs)
-      when 'help'
-        help 
-      when 'exit'
-        exit_jukebox
-        break 
-      else 
-        help 
-      end 
-    end 
-  end 
-  run(songs)
-    
+    when 'play'
+      play(songs)
+    else
+      puts 'That is not a option! Try Again.'
+    end
+  puts
+  puts "Please make a selection"
+  choice = gets.chomp
+  end
+exit_jukebox
+end
