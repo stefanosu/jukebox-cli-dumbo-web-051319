@@ -1,3 +1,4 @@
+require = 'pry'
 songs = [
   "Phoenix - 1901",
   "Tokyo Police Club - Wait Up",
@@ -12,6 +13,7 @@ songs = [
 
 def help
   help = <<-HELP
+  binding.pry 
 I accept the following commands:
 - help  displays this help message
 - list displays a list of songs you can play
