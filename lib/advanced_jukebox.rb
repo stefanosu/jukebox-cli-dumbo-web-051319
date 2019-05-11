@@ -12,24 +12,16 @@
 # "Graduation Failed" => '< path to this directory >/jukebox-cli/audio/Emerald-Park/07.mp3'
 # }
 
-
-def help
   #this method should be the same as in jukebox.rb
 def help
-  help = <<-HELP
+  help = <<- HELP
 I accept the following commands:
 - help : displays this help message
 - list : displays a list of songs you can play
 - play : lets you choose a song to play
 - exit : exits this program
 HELP
-
   puts help
-end
-     "- help : displays this help message",
-    "- list : displays a list of songs you can play",
-    "- play : lets you choose a song to play",
-    "- exit : exits the program"
 end
 
   def list(my_songs)
