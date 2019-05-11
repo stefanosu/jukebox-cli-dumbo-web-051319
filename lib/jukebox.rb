@@ -54,7 +54,7 @@ end
     else
       puts "Invalid input, please try again"
       puts
-      # play(songs)
+      play(songs)
     end
   else # the song was provided as a number
     if song_number <= songs.length
