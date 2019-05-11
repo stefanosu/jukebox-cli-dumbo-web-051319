@@ -20,6 +20,7 @@ I accept the following commands:
 HELP
   puts  
 end
+help 
 
   def start_game(songs)
   puts "Please enter a command:"
