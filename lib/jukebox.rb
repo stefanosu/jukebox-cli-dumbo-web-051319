@@ -25,7 +25,6 @@ def play(my_songs)
     end
 end
 
- run(my_songs)
 
 def help
   puts "I accept the following commands:\n
