@@ -79,4 +79,3 @@ def run(songs)
     end 
   end 
   run(songs)#this method is the same as in jukebox.rb
-end
