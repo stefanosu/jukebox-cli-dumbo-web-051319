@@ -56,8 +56,7 @@ def exit_jukebox
 end #this method is the same as in jukebox.rb
 
 
-def run(my_songs)
-  def run(songs)
+def run(songs)
   #help
   command = "" 
   while command  
